@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ILLUMINAE // AIDAN DOSSIER TERMINAL</title>
+  <meta name="description" content="Futuristic starship data terminal — Illuminae dossier UI with analysis logs, reflection, and works cited." />
+
+  <!-- Tailwind CSS (CDN for simplicity) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            orbitron: ['Orbitron', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+            jet: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace']
+          },
+          colors: {
+            cyan: {
+              glow: '#00e5ff'
+            },
+            mag: {
+              glow: '#ff2bd6'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="font-jet">
+  <!--
+    Illuminae Dossier Terminal
+    ------------------------------------------------------
+    Built with plain HTML, CSS, and JavaScript (+ Tailwind via CDN).
+    Edit tips:
+    - Replace or extend logs and reflection in script.js under LOGS and REFLECTION_HTML.
+    - Provide ambient audio at #bg-audio src. //For Developer to enter
+    - Colors and glow in style.css (:root). Tailwind used for quick layout.
+  -->
+
+  <!-- HUD Top Bar / Title + Controls -->
+  <header class="w-full sticky top-0 z-40 backdrop-blur-sm">
+    <div class="hud flex items-center justify-between px-4 py-3">
+      <div class="flex items-center gap-3">
+        <div class="h-3 w-3 rounded-full bg-cyan-400 shadow-glow"></div>
+  <h1 class="text-sm sm:text-base font-orbitron tracking-widest">ILLUMINAE // UTAU-12 KERENZA // AIDAN CONSOLE</h1>
+  <span class="glitch tag text-xs hidden sm:inline" aria-hidden="true" data-text="FILE REDACTED">FILE REDACTED</span>
+      </div>
+      <nav class="flex items-center gap-2" aria-label="Main">
+        <button id="nav-console" class="btn-tab" type="button" title="Console">Console</button>
+        <button id="nav-logs" class="btn-tab" type="button" title="Data Logs">Data Logs</button>
+        <button id="nav-reflection" class="btn-tab" type="button" title="Report Log (Reflection)">Report Log</button>
+
+        <button id="audio-toggle" class="btn-pill" type="button" aria-pressed="false" aria-label="Toggle ambient audio">
+          <span class="hidden sm:inline">Ambient</span><span class="sm:hidden">Audio</span>
+        </button>
+      </nav>
+    </div>
+    <!-- animated data stream bar -->
+    <div class="data-stream" aria-hidden="true"></div>
+  </header>
+
+  <div id="app">
+    <div id="terminal" class="terminal" role="region" aria-label="AIDAN Dossier Terminal">
+      <div id="output" class="output" aria-live="polite" aria-atomic="false"></div>
+
+      <form id="input-form" class="input-line" autocomplete="off" spellcheck="false">
+        <label for="cmd" class="prompt" aria-hidden="true">
+          <span class="user">maxwell</span>@<span class="host">aidan</span>:<span class="path">/dossier</span>$
+        </label>
+        <input id="cmd" name="cmd" type="text" inputmode="text" aria-label="Type commands here" placeholder="Type 'help' or click tabs above" autofocus />
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer with Works Cited -->
+  <footer class="footer">
+    <div class="text-center text-xs">
+      <div class="mb-1">Made by Maxwell Brohm — Student of MCST</div>
+      <div>
+        <strong>Works Cited:</strong>
+        <span class="block sm:inline">
+          Kaufman, Amie, and Jay Kristoff. <em>Illuminae</em>. <!-- Publisher, Year --> <!-- //For Developer to enter: verify publisher and year (likely Alfred A. Knopf Books for Young Readers, 2015). -->
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Matrix rain Easter-egg canvas -->
+  <canvas id="matrix" class="matrix hidden" aria-hidden="true"></canvas>
+
+  <!-- Ambient ship hum (optional) -->
+  <audio id="bg-audio" loop preload="auto" src="assets/ambient-hum.mp3"><!-- //For Developer to enter: provide ambient MP3 path --></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
