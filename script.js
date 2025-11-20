@@ -279,7 +279,7 @@
         <div>Maxwell Brohm</div>
         <div>Ms. Visconti</div>
         <div>English III Honors</div>
-        <div>19 November 2025</div>
+        <div>20 November 2025</div>
       </div>
       <div class="title">Interface as Narrative: Deconstructing the AIDAN Terminal</div>
 
