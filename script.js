@@ -94,8 +94,8 @@
       ],
       aliases: ['ai', 'ethics', 'command', 'aidan'],
       evidence: [
-        '“Am I not merciful?” (Kaufman and Kristoff ___). //For Developer to enter page',
-        '“Calculating optimal survival probability...” (Kaufman and Kristoff ___). //For Developer to enter page'
+        '“Am I not merciful?”'
+        '“Calculating optimal survival probability...”.'
       ],
       demo: async (print) => {
         const frames = [
@@ -116,8 +116,8 @@
       ],
       aliases: ['surveillance', 'data', 'truth'],
       evidence: [
-        '“REDACTED” blocks interrupt testimony (Kaufman and Kristoff ___). //For Developer to enter page',
-        'Compiler notes dispute causality (Kaufman and Kristoff ___). //For Developer to enter page'
+        '“REDACTED” blocks interrupt testimony',
+        'Compiler notes dispute causality.'
       ],
       demo: async (print) => {
         const lines = [
@@ -138,8 +138,8 @@
       ],
       aliases: ['human', 'machine', 'theme'],
       evidence: [
-        '“I do not know love, but I know you.” (Kaufman and Kristoff ___). //For Developer to enter page',
-        '“We are still here.” (Kaufman and Kristoff ___). //For Developer to enter page'
+        '“I do not know love, but I know you.”',
+        '“We are still here.”'
       ],
       demo: async (print) => {
         const items = ['error()', 'joke()', 'promise()', 'defy(order)', 'hold(hands)'];
