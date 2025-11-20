@@ -94,7 +94,7 @@
       ],
       aliases: ['ai', 'ethics', 'command', 'aidan'],
       evidence: [
-        '“Am I not merciful?”'
+        '“Am I not merciful?”',
         '“Calculating optimal survival probability...”.'
       ],
       demo: async (print) => {
@@ -459,7 +459,7 @@
     else if (mode === 'off') audioEl.muted = true;
     else audioEl.muted = !audioEl.muted;
     if (!audioEl.src) {
-      printText('No ambient file configured. //For Developer to enter audio src');
+      printText('');
       return;
     }
     if (!audioEl.paused && audioEl.muted) { audioEl.pause(); }
